@@ -1,6 +1,7 @@
+@use "../utils/" as u;
 footer {
   width: 100%;
-  height: 40rem;
+  min-height: 40rem;
   background-color: var(--grayishBlue);
   font-size: 2rem;
   display: flex;
@@ -37,6 +38,18 @@ footer {
             color: var(--turquoise);
           }
         }
+      }
+    }
+  }
+}
+@include u.breakpoint-down(medium) {
+  footer {
+    .listas {
+      min-width: 200px;
+      align-items: center;
+      flex-direction: column;
+      .list {
+        margin-block: 1rem;
       }
     }
   }
