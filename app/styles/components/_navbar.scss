@@ -1,12 +1,18 @@
+@use "../utils/" as u;
+
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  height: 100px;
   background-color: #2f2f2f;
+  .bars-icon {
+    width: 40px;
+    height: fit-content;
+    display: none;
+  }
   .nav-bar {
     width: 65vw;
     padding: 2rem 0;
-    min-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +37,44 @@ header {
             color: var(--seaBlue);
           }
         }
+      }
+    }
+  }
+}
+@include u.breakpoint-down(medium) {
+  header {
+    justify-content: right;
+    height: 60px;
+    img {
+      margin: 1rem;
+    }
+    .bars-icon {
+      display: block;
+    }
+    .nav-bar {
+      padding: 0;
+      text-align: right;
+      width: fit-content;
+      ul {
+        display: flex;
+        justify-content: unset;
+        align-items: center;
+        margin-top: 0;
+        flex-direction: column;
+        background-color: #293744;
+        visibility: hidden;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        height: calc(100vh - 60px);
+        min-height: 30rem;
+        li {
+          margin-block: 2rem;
+        }
+      }
+      .deploy {
+        visibility: visible;
       }
     }
   }
