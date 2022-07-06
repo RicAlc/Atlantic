@@ -1,5 +1,5 @@
 footer {
-  width: 100vw;
+  width: 100%;
   height: 40rem;
   background-color: var(--grayishBlue);
   font-size: 2rem;
@@ -13,14 +13,18 @@ footer .socialmedia ul {
   display: flex;
 }
 footer .socialmedia ul li {
-  margin: 0 2rem;
+  margin: 2rem;
   list-style-type: none;
 }
 footer .listas {
   width: 70%;
+  min-width: 800px;
   margin-bottom: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+footer .listas .list {
+  width: 22rem;
 }
 footer .listas ul li {
   list-style-type: none;
@@ -70,6 +74,14 @@ header .nav-bar ul li a:hover {
   color: var(--seaBlue);
 }
 
+:root {
+  --fs-xl: clamp(3rem, 12vw + 1rem, 12rem);
+  --fs-800: clamp(2.5rem, 3vw + 0.5rem, 5rem);
+  --fs-700: clamp(2.2rem, 3vw + 1.2rem, 3.5rem);
+  --fs-600: clamp(1.8rem, 1vw + 1rem, 2.2rem);
+  --fs-500: clamp(1.4rem, 1vw + 1rem, 1.8rem);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -103,24 +115,28 @@ a:active {
   text-decoration: none;
 }
 
-img {
-  margin: 5rem 0;
+.home-link {
+  margin: 3rem;
+  text-align: center;
 }
 
 .data-bg {
   margin: 5rem 0;
-  width: 100vw;
-  height: 40rem;
-  background-image: url("../../assets/mexicoBeach.jpg");
+  width: 100%;
+  height: 50rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("../../assets/mexicoBeach.jpg");
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   background-attachment: fixed;
 }
 .data-bg .data {
   width: 65%;
+  min-width: 800px;
   display: flex;
-  margin: 4rem auto;
-  justify-content: space-between;
   align-items: center;
+  margin: auto;
+  justify-content: space-between;
 }
 .data-bg .data .logros {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -128,28 +144,29 @@ img {
 .data-bg .data .logros .logro-texto {
   display: block;
   color: var(--white);
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: var(--fs-600);
+  font-weight: 700;
 }
 .data-bg .data .logros .logro-texto span {
-  font-size: 6rem;
+  font-size: var(--fs-800);
   font-weight: 700;
 }
 .data-bg .data .nosotros {
-  width: 40rem;
+  width: 35rem;
   height: 32rem;
   background-color: var(--white);
   box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.5);
   padding: 3rem;
-  font-size: 2.2rem;
+  font-size: var(--fs-600);
 }
 
 article {
-  width: 120rem;
+  width: 50%;
+  min-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 15rem 0;
+  margin: 15rem auto;
 }
 article .info {
   width: 45%;
@@ -165,7 +182,7 @@ article h1 {
 }
 article p {
   margin-top: 2.5rem;
-  font-size: 1.8rem;
+  font-size: var(--fs-500);
   line-height: 3rem;
 }
 article img {
