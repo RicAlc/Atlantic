@@ -11,6 +11,7 @@
     url("../../assets/mexicoBeach.jpg");
   // background-image: url("../../assets/mexicoBeach.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   background-attachment: fixed;
@@ -95,6 +96,7 @@ article {
       width: 85%;
       flex-direction: column;
       .nosotros {
+        max-width: 350px;
         margin-top: 1rem;
         width: fit-content;
         height: fit-content;
