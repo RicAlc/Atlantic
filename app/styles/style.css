@@ -1,6 +1,15 @@
+/* Example
+@use "utils" as u;
+@include u.breakpoint(large){
+    grid-template-columns: 2fr 1fr;
+}
+@include u.breakpoint(medium){
+    grid-template-columns: 1fr 1fr;
+}
+*/
 footer {
   width: 100%;
-  height: 40rem;
+  min-height: 40rem;
   background-color: var(--grayishBlue);
   font-size: 2rem;
   display: flex;
@@ -26,6 +35,9 @@ footer .listas {
 footer .listas .list {
   width: 22rem;
 }
+footer .listas .list h2 {
+  font-size: var(--f600);
+}
 footer .listas ul li {
   list-style-type: none;
 }
@@ -38,16 +50,35 @@ footer .listas ul li a:hover {
   color: var(--turquoise);
 }
 
+@media (max-width: 56.24875em) {
+  footer .listas {
+    min-width: 200px;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .listas .list {
+    margin-block: 1rem;
+  }
+  footer p {
+    padding-inline: 1rem;
+  }
+}
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  height: 100px;
   background-color: #2f2f2f;
+}
+header .bars-icon {
+  width: 40px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: none;
 }
 header .nav-bar {
   width: 65vw;
   padding: 2rem 0;
-  min-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +105,46 @@ header .nav-bar ul li a:hover {
   color: var(--seaBlue);
 }
 
+@media (max-width: 56.24875em) {
+  header {
+    justify-content: right;
+    height: 60px;
+  }
+  header img {
+    margin: 1rem;
+  }
+  header .bars-icon {
+    display: block;
+  }
+  header .nav-bar {
+    padding: 0;
+    text-align: right;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header .nav-bar ul {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    margin-top: 0;
+    flex-direction: column;
+    background-color: #293744;
+    visibility: hidden;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    height: calc(100vh - 60px);
+    min-height: 30rem;
+  }
+  header .nav-bar ul li {
+    margin-block: 2rem;
+  }
+  header .nav-bar .deploy {
+    visibility: visible;
+  }
+}
 :root {
   --fs-xl: clamp(3rem, 12vw + 1rem, 12rem);
   --fs-800: clamp(2.5rem, 3vw + 0.5rem, 5rem);
@@ -189,6 +260,47 @@ article img {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+.display-none {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 56.24875em) {
+  .home-link {
+    margin: 1rem auto;
+    width: 70%;
+  }
+  .home-link a {
+    width: 60%;
+  }
+  .home-link a img {
+    width: 100%;
+  }
+
+  .data-bg {
+    height: 52rem;
+  }
+  .data-bg .data {
+    min-width: 200px;
+    width: 85%;
+    flex-direction: column;
+  }
+  .data-bg .data .nosotros {
+    margin-top: 1rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  article {
+    margin: 5rem auto;
+    width: 90%;
+    min-width: 200px;
+  }
+}
 header .overlay {
   height: 100vh;
   width: 100vw;
@@ -209,9 +321,6 @@ header video {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-}
-header img {
-  margin: 2rem 0;
 }
 header .landpage {
   background-color: rgba(0, 0, 0, 0);
@@ -309,15 +418,6 @@ header .landpage-info .register-btn:active {
   color: var(--seaBlue);
 }
 
-/* Example
-@use "utils" as u;
-@include u.breakpoint(large){
-    grid-template-columns: 2fr 1fr;
-}
-@include u.breakpoint(medium){
-    grid-template-columns: 1fr 1fr;
-}
-*/
 :root {
   --white: #ffffff;
   --darkBlue: #112945;

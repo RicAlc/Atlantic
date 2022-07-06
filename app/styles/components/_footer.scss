@@ -26,6 +26,9 @@ footer {
     justify-content: space-between;
     .list {
       width: 22rem;
+      h2 {
+        font-size: var(--f600);
+      }
     }
     ul {
       li {
@@ -51,6 +54,9 @@ footer {
       .list {
         margin-block: 1rem;
       }
+    }
+    p {
+      padding-inline: 1rem;
     }
   }
 }
