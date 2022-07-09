@@ -69,12 +69,11 @@
   img {
     display: none;
   }
-  body {
+
+  .container {
     background-image: url("../../../assets/beachCleaner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  .container {
     .formulario {
       width: 80%;
       max-width: 38rem;
