@@ -365,9 +365,6 @@ header .landpage-info .register-btn:active {
 }
 
 @media (max-width: 56.24875em) {
-  header .overlay img {
-    display: block;
-  }
   header .overlay .nav-bar {
     align-self: flex-end;
     text-align: right;
@@ -453,7 +450,8 @@ header .landpage-info .register-btn:active {
 }
 
 @media (max-width: 56.24875em) {
-  img {
+  .cleaner-img {
+    margin: 1rem;
     display: none;
   }
 

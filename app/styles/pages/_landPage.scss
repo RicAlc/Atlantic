@@ -62,9 +62,6 @@ header {
 @include u.breakpoint-down(medium) {
   header {
     .overlay {
-      img {
-        display: block;
-      }
       .nav-bar {
         align-self: flex-end;
         text-align: right;
