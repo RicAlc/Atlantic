@@ -3,8 +3,8 @@ const navbar = document.getElementById("navbar");
 const main = document.getElementById("content");
 const menu_bg = document.getElementById("menu-bg");
 
+// Menu desplegable mobile
 bars_btn.addEventListener("click", () => {
-  console.log("hi, you pressed the bar button");
   if (navbar.classList.contains("deploy")) {
     navbar.classList.remove("deploy");
     main.classList.remove("display-none");

@@ -456,7 +456,7 @@ header .landpage-info .register-btn:active {
   }
 
   .container {
-    background-image: url("../../../assets/beachCleaner.jpg");
+    background-image: url("../../assets/beachCleaner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
