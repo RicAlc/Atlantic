@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Atlantic's - Home page</title>
-    <link rel="icon" href="Ayotl.png">
+    <link rel="icon" href="Ayotl.png" />
     <!-- STYLES -->
-    <link rel="stylesheet" href="./app/styles/style.css">
-</head>
+    <link rel="stylesheet" href="./app/styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="overlay">
-            <nav class="nav-bar landpage">
-                <ul>
-                    <li><a href="./pages/atlantics.html">QUIENES SOMOS</a></li>|
-                    <li><a href="#Objetivos">OBJETIVOS</a></li>|
-                    <li><a href="#ComoLograrlo">COMO LOGRARLO</a></li>|
-                    <li><a href="#Ayotl">AYOTL</a></li>|
-                    <li><a href="./pages/registro.html">UNETENOS</a></li>
-                </ul>
-            </nav>
-            <div class="landpage-info">
-                <img src="./assets/logo.png" alt="Logo de Atlantics">
-                <p class="frase">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita ipsam magni
-                    ducimus
-                    incidunt voluptatibus"</p>
-                <button onclick="signin" class="register-btn">ME APUNTO</button>
-            </div>
-        </div>
-        <video src="./assets/videoBG.mp4" muted loop autoplay></video>
-    </header>
-</body>
-<script src="Atlantics.js"></script>
+      <div class="overlay">
+        <nav class="nav-bar landpage">
+          <img
+            class="bars-icon"
+            src="../assets/bars-icon.png"
+            alt="Menú barra de navegación"
+            id="bars-icon"
+          />
+          <ul class="nav-bar__items" id="navbar">
+            <li><a href="#">QUIENES SOMOS</a></li>
 
+            <li><a href="#Objetivos">OBJETIVOS</a></li>
+
+            <li><a href="#ComoLograrlo">COMO LOGRARLO</a></li>
+
+            <li><a href="#Ayotl">AYOTL</a></li>
+
+            <li><a href="../pages/registro.html">UNETENOS</a></li>
+          </ul>
+        </nav>
+        <div class="landpage-info">
+          <img src="./assets/logo.png" alt="Logo de Atlantics" />
+          <p class="frase">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            expedita ipsam magni ducimus incidunt voluptatibus"
+          </p>
+          <button onclick="signin" class="register-btn">ME APUNTO</button>
+        </div>
+      </div>
+      <video src="./assets/videoBG.mp4" muted loop autoplay></video>
+    </header>
+    <main></main>
+    <script src="./app/js/script.js"></script>
+  </body>
 </html>

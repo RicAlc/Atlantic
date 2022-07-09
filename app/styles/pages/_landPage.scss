@@ -1,3 +1,4 @@
+@use "../utils/" as u;
 header {
   .overlay {
     height: 100vh;
@@ -33,7 +34,7 @@ header {
     .frase {
       text-align: center;
       color: var(--white);
-      font-size: 4.2rem;
+      font-size: var(--fs-800);
     }
     .register-btn {
       width: 18rem;
@@ -54,6 +55,25 @@ header {
       &:active {
         background-color: lightgray;
         transition: all 0.1s ease;
+      }
+    }
+  }
+}
+@include u.breakpoint-down(medium) {
+  header {
+    .overlay {
+      .nav-bar {
+        align-self: flex-end;
+        text-align: right;
+        .bars-icon {
+          align-self: flex-end;
+        }
+        ul {
+          background-color: rgb(41, 55, 68);
+        }
+        .deploy {
+          visibility: visible;
+        }
       }
     }
   }

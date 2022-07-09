@@ -21,6 +21,7 @@ header {
     ul {
       margin-top: 3rem;
       display: flex;
+      min-width: 700px;
       width: 100%;
       justify-content: space-around;
       color: var(--white);
@@ -59,6 +60,7 @@ header {
         display: flex;
         justify-content: unset;
         align-items: center;
+        min-width: 100px;
         margin-top: 0;
         flex-direction: column;
         background-color: #293744;
