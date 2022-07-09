@@ -379,6 +379,17 @@ header .landpage-info .register-btn:active {
     visibility: visible;
   }
 }
+.go-back {
+  font-size: var(--fs-500);
+  background-color: var(--blue);
+  color: var(--white);
+  padding-inline: 1rem;
+  border-radius: 2px;
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+}
+
 .container {
   display: flex;
   width: 100vw;
