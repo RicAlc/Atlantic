@@ -158,7 +158,6 @@ header .nav-bar ul li a:hover {
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid #4cc84c;
 }
 
 *,
@@ -406,7 +405,7 @@ header .landpage-info .register-btn:active {
   flex-direction: column;
 }
 .container .formulario legend {
-  font-size: 4rem;
+  font-size: var(--fs-800);
   margin-bottom: 10rem;
 }
 .container .formulario input {
@@ -438,6 +437,43 @@ header .landpage-info .register-btn:active {
   color: var(--seaBlue);
 }
 
+@media (max-width: 56.24875em) {
+  img {
+    display: none;
+  }
+
+  body {
+    background-image: url("../../../assets/beachCleaner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container .formulario {
+    width: 80%;
+    max-width: 38rem;
+    margin: auto auto;
+    background-color: white;
+    border-radius: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .formulario legend {
+    margin-block: 1rem;
+  }
+  .container .formulario button {
+    margin-block: 2rem;
+  }
+  .container .formulario a {
+    margin-bottom: 1.5rem;
+  }
+  .container .formulario form {
+    width: 80%;
+  }
+  .container .formulario form input {
+    width: 100%;
+  }
+}
 :root {
   --white: #ffffff;
   --darkBlue: #112945;
